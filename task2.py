@@ -86,6 +86,7 @@ def kernel_estimation(x):
 def is_normal_distribution(x, x_avg, x_var):
     """
     проверяет распределение
+
     """
     d_plus = 0
     for i, x_1 in enumerate(x):
@@ -94,7 +95,7 @@ def is_normal_distribution(x, x_avg, x_var):
     d_minus = 0
     for i, x_1 in enumerate(x):
         d_minus = max(d_minus, norm(loc=x_avg, scale=x_var).cdf(x_1) - i / len(x))
-    if (6 * len(x) * max(d_minus, d_plus) + 1) / (6 * np.sqrt(len(x))) <= 0.9042:
+    if (6 * len(x) * max(d_minus, d_plus) + 1) / (6 * np.sqrt(len(x))) <= 1.0599:
         return "Да"
     else:
         return "Нет"
