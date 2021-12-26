@@ -85,7 +85,7 @@ def kernel_estimation(x):
 
 def is_normal_distribution(x, x_avg, x_var):
     """
-    проверяет распределение
+    проверяет распределение для 0,01
 
     """
     d_plus = 0
@@ -121,7 +121,7 @@ def main():
     empirical(petal_w)
     histogram(petal_w)
     kernel_estimation(petal_w)
-    print("№2.4.\nЯвляется ли нормальным распределение?",
+    print("№2.4.\nЯвляется ли нормальным распределение для 0,01?",
           is_normal_distribution(petal_w, avg, np.sqrt(var)))
 
 
